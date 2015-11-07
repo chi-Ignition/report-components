@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.chitek.ignition</groupId>
+	<artifactId>chi-report-components</artifactId>
+	<version>1.9.0</version>
+	<packaging>pom</packaging>
+	<name>Ignition report components</name>
+	<modules>
+		<module>rc-common</module>
+		<module>rc-gateway</module>
+		<module>rc-designer</module>
+		<module>rc-module</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<local-gateway-url>http://10.224.10.30:8088</local-gateway-url>
+	</properties>
+
+	<build>
+		<plugins>
+			<!-- skip installation to local repository -->
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.1</version>
+				<executions>
+					<execution>
+						<id>default-install</id>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- skip default deployment -->
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.1</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>ia-releases</id>
+			<url>https://nexus.inductiveautomation.com/repository/inductiveautomation-releases</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+            <id>ia-snapshots</id>
+            <url>https://nexus.inductiveautomation.com/repository/inductiveautomation-snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+		</repository>
+		<repository>
+			<id>ia-thirdparty</id>
+			<url>https://nexus.inductiveautomation.com/repository/inductiveautomation-thirdparty</url>
+			<releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>ia-plugin-releases</id>
+			<url>https://nexus.inductiveautomation.com/repository/inductiveautomation-releases</url>
+		</pluginRepository>
+	</pluginRepositories>
+  
+</project>

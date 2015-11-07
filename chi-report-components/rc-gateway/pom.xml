@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.chitek.ignition</groupId>
+    <artifactId>chi-report-components</artifactId>
+    <version>1.9.0</version>
+  </parent>
+  <artifactId>rc-gateway</artifactId>
+  <name>rc-gateway</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.inductiveautomation.ignitionsdk</groupId>
+			<artifactId>reporting-gateway</artifactId>
+			<version>7.9.1</version>
+			<scope>provided</scope>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.chitek.ignition</groupId>
+			<artifactId>rc-common</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+	</dependencies>
+  
+</project>
