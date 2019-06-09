@@ -46,7 +46,6 @@ import com.inductiveautomation.rm.archiver.RXArchiver;
 import com.inductiveautomation.rm.archiver.RXElement;
 import com.inductiveautomation.rm.base.RMGroup;
 import com.inductiveautomation.rm.base.RMKey;
-import com.inductiveautomation.rm.base.RMKeyChain;
 import com.inductiveautomation.rm.base.RMListUtils;
 import com.inductiveautomation.rm.shape.RMShape;
 import com.inductiveautomation.rm.shape.RMTableRowRPG;
@@ -259,7 +258,7 @@ public class StatusChart extends AbstractJ2DShape {
 				String series = seriesKey.isEmpty() ? "1" : RMKey.getStringValue(row, seriesKey).trim();
 				String id = RMKey.getStringValue(row, idKey).trim();
 				long start = (Long) TypeUtilities.coerceNullSafe(RMKey.getValue(row, startKey), Long.class);
-
+				
 				Color color = useColor ? TypeUtilities.toColor(RMKey.getValue(row, colorKey, String.class))	: Color.BLUE;
 				Event event = new Event(start, start, id, color);
 				
@@ -639,7 +638,7 @@ public class StatusChart extends AbstractJ2DShape {
     	      }
     	      else
     	      {
-    	        dataset = RMKeyChain.getListValue(owner, datasetKey);
+    	        dataset = owner.getKeyChainListValue(datasetKey);
     	      }
     	} else { 
     		dataset = owner.getKeyChainListValue(datasetKey);
