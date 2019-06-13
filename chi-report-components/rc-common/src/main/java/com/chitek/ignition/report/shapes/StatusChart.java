@@ -565,8 +565,8 @@ public class StatusChart extends AbstractJ2DShape {
         e.add("axisLabelFont", axisLabelFont);
         e.add("axisTickLabelFont", axisTickLabelFont);
         
-        e.add("startDate", new Long(startDate!=null?startDate.getTime():0L));
-        e.add("startDate", new Long(endDate!=null?endDate.getTime():0L));
+        e.add("startDate", Long.valueOf(startDate!=null?startDate.getTime():0L));
+        e.add("startDate", Long.valueOf(endDate!=null?endDate.getTime():0L));
         
         e.add("scriptEnabled", scriptEnabled);
 		if (StringUtils.isNotBlank(script)) {

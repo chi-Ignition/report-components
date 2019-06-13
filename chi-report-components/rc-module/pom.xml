@@ -4,19 +4,19 @@
 	<parent>
 		<groupId>com.chitek.ignition</groupId>
 		<artifactId>chi-report-components</artifactId>
-		<version>1.9.0</version>
+		<version>3.0.0</version>
 	</parent>
 	<artifactId>chi-report-components-module</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>com.chitek.ignition</groupId>
 			<artifactId>rc-designer</artifactId>
-			<version>1.9.0</version>
+			<version>3.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.chitek.ignition</groupId>
 			<artifactId>rc-gateway</artifactId>
-			<version>1.9.0</version>
+			<version>3.0.0</version>
 		</dependency>
 	</dependencies>
 
@@ -59,7 +59,7 @@
 			<plugin>
                 <groupId>com.inductiveautomation.ignitionsdk</groupId>
                 <artifactId>ignition-maven-plugin</artifactId>
-                <version>1.0.12</version>
+                <version>1.1.0</version>
                 <executions>
                 	<execution>
                     	<id>build</id>
@@ -101,18 +101,18 @@
                     <moduleName>Reporting components</moduleName>
                     <moduleDescription>Additional reporting components.</moduleDescription>
                     <moduleVersion>${project.version}.${git.commit.time}</moduleVersion>
-                    <requiredIgnitionVersion>7.8.0</requiredIgnitionVersion>
-                    <requiredFrameworkVersion>7</requiredFrameworkVersion>
+                    <requiredIgnitionVersion>8.0.0</requiredIgnitionVersion>
+                    <requiredFrameworkVersion>8</requiredFrameworkVersion>
 				    <licenseFile>license.html</licenseFile>
 					
 					<depends>
 						<depend>
 							<scope>D</scope>
-							<moduleId>rept</moduleId>
+							<moduleId>com.inductiveautomation.reporting</moduleId>
 						</depend>
 						<depend>
 							<scope>G</scope>
-							<moduleId>rept</moduleId>
+							<moduleId>com.inductiveautomation.reporting</moduleId>
 						</depend>
 					</depends>
 
@@ -133,14 +133,14 @@
 
 	<pluginRepositories>
         <pluginRepository>
-            <id>ia-releases</id>
+            <id>ignition-releases</id>
             <url>https://nexus.inductiveautomation.com/repository/inductiveautomation-releases</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
 			</snapshots>
         </pluginRepository>
     </pluginRepositories>

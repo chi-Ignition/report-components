@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.chitek.ignition</groupId>
     <artifactId>chi-report-components</artifactId>
-    <version>1.9.0</version>
+    <version>3.0.0</version>
   </parent>
   <artifactId>rc-gateway</artifactId>
   <name>rc-gateway</name>
@@ -18,10 +18,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.8.0</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<maven.compiler.release>11</maven.compiler.release>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -31,14 +30,14 @@
 		<dependency>
 			<groupId>com.inductiveautomation.ignitionsdk</groupId>
 			<artifactId>reporting-gateway</artifactId>
-			<version>7.9.1</version>
+			<version>8.0.1</version>
 			<scope>provided</scope>
 			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>com.chitek.ignition</groupId>
 			<artifactId>rc-common</artifactId>
-			<version>1.9.0</version>
+			<version>3.0.0</version>
 		</dependency>
 	</dependencies>
   

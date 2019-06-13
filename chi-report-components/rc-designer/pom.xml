@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.chitek.ignition</groupId>
 		<artifactId>chi-report-components</artifactId>
-		<version>1.9.0</version>
+		<version>3.0.0</version>
 	</parent>
 	<artifactId>rc-designer</artifactId>
 	<name>rc-designer</name>
@@ -28,10 +28,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.8.0</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<maven.compiler.release>11</maven.compiler.release>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -41,12 +40,12 @@
 		<dependency>
 			<groupId>com.chitek.ignition</groupId>
 			<artifactId>rc-common</artifactId>
-			<version>1.9.0</version>
+			<version>3.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.inductiveautomation.ignitionsdk</groupId>
 			<artifactId>reporting-designer</artifactId>
-			<version>7.9.1</version>
+			<version>8.0.1</version>
 			<type>pom</type>
 			<scope>provided</scope>
 			<exclusions>
@@ -55,12 +54,6 @@
 					<groupId>*</groupId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>com.jidesoft</groupId>
-			<artifactId>jide-common</artifactId>
-			<version>3.5.13</version>
-			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
