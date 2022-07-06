@@ -75,7 +75,7 @@
 		<dependency>
 			<groupId>org.python</groupId>
 			<artifactId>jython</artifactId>
-			<version>2.5.3</version>
+			<version>2.7.1-ia</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
